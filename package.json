@@ -1,6 +1,6 @@
 {
   "name": "am-atm-machine",
-  "version": "1.0.2",
+  "version": "1.0.4",
   "description": "The ATM machine run with the help of inquirer and node.js.",
   "main": "app.js",
   "type":"module",

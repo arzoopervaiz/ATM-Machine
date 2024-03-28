@@ -5,10 +5,10 @@ import chalk from "chalk";
 let myBalance = Math.floor(Math.random() * 100000 + 1); //generate random balance.
 // Display welcome message
 console.log(
-  chalk.bold.overline.underline("\n\t\t|🎉 Welcome to the ATM 🎉|\n\t\t")
+  chalk.bold.bgBlue.italic("\n\t\tWelcome to the ATM\n\t\t")
 );
 console.log(
-  chalk.bold.italic.bgBlue("\n\t.........Please insert your card..........\n\t")
+  chalk.bold.italic.bgBlue("\n\t.....Please insert your card.....\n\t")
 );
 // Prompt user to enter PIN
 let pinAnswer = await inquirer.prompt([
@@ -25,7 +25,7 @@ let mypin = pinAnswer.pin;
 if (!isNaN(mypin)) {
   // Verify PIN
   console.log(
-    chalk.italic.bold("Your PIN code has been successfully verified.✅\n")
+    chalk.italic.bold("Your PIN code has been successfully verified.\n")
   );
   // Prompt user to select an option
   let optionAns = await inquirer.prompt([
@@ -75,7 +75,7 @@ if (!isNaN(mypin)) {
       myBalance -= amountAns.amount;
       // Update balance after withdrawal
       console.log(
-        chalk.bold.italic(`Here is your remaining balance💰 : `) +
+        chalk.bold.italic(`Here is your remaining balance: `) +
           chalk.cyan.bold.italic(`${myBalance}\n`)
       );
     }
@@ -102,7 +102,7 @@ if (!isNaN(mypin)) {
       },
     ]);
     console.log(
-      chalk.bold.italic(`Here is your remaining balance💰: `) +
+      chalk.bold.italic(`Here is your remaining balance: `) +
         chalk.bold.cyan.italic(` ${myBalance}\n`)
     );
   }
